@@ -13,7 +13,7 @@
 
 NAME = main
 
-SRC = main.cpp
+SRC = main.cpp zombie.cpp zombieHorde.cpp
 
 CXX = c++
 
