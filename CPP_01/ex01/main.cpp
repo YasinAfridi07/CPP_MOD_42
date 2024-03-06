@@ -6,7 +6,18 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/02 19:30:28 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/02 19:30:29 by yusman           ###   ########.fr       */
+/*   Updated: 2024/03/06 18:20:13 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include "Zombie.hpp"
+
+int main()
+{
+	int n = 3;
+
+	Zombie *zomb = zombieHorde(n, "123");
+	delete [](zomb);
+	return 0;
+}

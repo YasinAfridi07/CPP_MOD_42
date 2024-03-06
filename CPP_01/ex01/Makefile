@@ -6,14 +6,14 @@
 #    By: yusman <yusman@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/02 19:30:15 by yusman            #+#    #+#              #
-#    Updated: 2024/03/02 19:30:26 by yusman           ###   ########.fr        #
+#    Updated: 2024/03/04 19:41:14 by yusman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = main
 
-SRC = main.cpp zombie.cpp zombieHorde.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 CXX = c++
 
