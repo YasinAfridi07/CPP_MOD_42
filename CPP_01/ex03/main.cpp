@@ -6,11 +6,10 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:42:53 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/07 20:39:25 by yusman           ###   ########.fr       */
+/*   Updated: 2024/03/15 16:55:00 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 

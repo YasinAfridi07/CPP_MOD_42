@@ -6,21 +6,22 @@
 #    By: yusman <yusman@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/07 18:21:37 by yusman            #+#    #+#              #
-#    Updated: 2024/03/07 18:22:24 by yusman           ###   ########.fr        #
+#    Updated: 2024/03/15 16:54:14 by yusman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = main
 
 SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
-CXX = c++
-
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
 OBJ = $(SRC:.cpp=.o)
 
+CXX = c++
+
 RM = rm -f
+
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
+
+NAME = main
 
 %.o : %.cpp
 			$(CXX) $(CXXFLAGS) -c $< -o $@
