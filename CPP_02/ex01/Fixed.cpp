@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/30 04:12:48 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/30 05:32:41 by yusman           ###   ########.fr       */
+/*   Updated: 2024/03/31 01:16:22 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ Fixed & Fixed::operator=(Fixed const &rhs)
 		this->_fixed_point = rhs.getRawBits();
 	return (*this);
 }
-
 
 Fixed::~Fixed()
 {

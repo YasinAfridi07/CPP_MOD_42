@@ -6,13 +6,13 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 06:05:23 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/30 03:44:54 by yusman           ###   ########.fr       */
+/*   Updated: 2024/03/31 01:05:04 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(): _fixed_point(0) // can i init fixed = 0 inside the scope?
+Fixed::Fixed(): _fixed_point(0)
 {
 	std::cout << "Default Constructor Called" << std::endl;
 }
@@ -31,7 +31,7 @@ Fixed::~Fixed()
 Fixed & Fixed::operator=(Fixed const &rhs)
 {
 	std::cout << "Copy assignment operator called" << std::endl;
-	if(this != &rhs) //  necessary to avoid self-assignment.
+	if(this != &rhs)
 		this->_fixed_point = rhs.getRawBits();
 	return (*this);
 }
