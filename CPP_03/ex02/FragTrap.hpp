@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/30 05:37:16 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/31 02:11:18 by yusman           ###   ########.fr       */
+/*   Created: 2024/04/01 07:38:16 by yusman            #+#    #+#             */
+/*   Updated: 2024/04/01 08:10:00 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-#include <iostream>
-int
-main( void )
+#include "ClapTrap.hpp"
+
+
+class FragTrap : public ClapTrap
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	private:
+	public:
+		FragTrap(std::string);
+		~FragTrap();
 
+		void highFivesGuys(void);
+};
 
-
-	return 0;
-}
+#endif

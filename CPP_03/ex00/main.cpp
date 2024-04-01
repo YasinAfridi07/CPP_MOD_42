@@ -5,28 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/30 05:37:16 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/31 02:11:18 by yusman           ###   ########.fr       */
+/*   Created: 2024/03/31 21:19:28 by yusman            #+#    #+#             */
+/*   Updated: 2024/03/31 22:58:31 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
 
-#include <iostream>
-int
-main( void )
+int main()
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	ClapTrap a("Robot");
 
-
-
-	return 0;
+	a.attack("Zombie");
+	a.takeDamage(3);
+	a.beRepaired(3);
+	return(0);
 }

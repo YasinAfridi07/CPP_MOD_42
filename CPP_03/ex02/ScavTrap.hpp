@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/30 05:37:16 by yusman            #+#    #+#             */
-/*   Updated: 2024/03/31 02:11:18 by yusman           ###   ########.fr       */
+/*   Created: 2024/04/01 07:38:07 by yusman            #+#    #+#             */
+/*   Updated: 2024/04/01 07:59:45 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-#include <iostream>
-int
-main( void )
+#include "ClapTrap.hpp"
+
+
+class ScavTrap : public ClapTrap
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	private:
 
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
 
+		void	guadGate();
+		void	attack(const std::string& target);
 
-	return 0;
-}
+};
+
+#endif
