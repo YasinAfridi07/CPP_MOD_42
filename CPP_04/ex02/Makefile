@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: yusman <yusman@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/05 03:18:16 by yusman            #+#    #+#              #
-#    Updated: 2024/04/05 21:29:10 by yusman           ###   ########.fr        #
+#    Created: 2024/04/05 21:47:11 by yusman            #+#    #+#              #
+#    Updated: 2024/04/05 21:47:16 by yusman           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = main
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp Brain.cpp
+SRC = main.cpp AAnimal.cpp Cat.cpp Dog.cpp Brain.cpp
 
 CXX = c++
 

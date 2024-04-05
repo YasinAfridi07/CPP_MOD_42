@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 03:03:01 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 04:43:01 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 21:47:47 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -23,7 +24,7 @@ public:
 	Cat();
 	~Cat();
 
-	
+
 
 	void	makeSound() const;
 };

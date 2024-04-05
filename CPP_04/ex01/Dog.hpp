@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 03:08:34 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 04:42:55 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 21:05:00 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define DOG_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Dog : public Animal
 {
@@ -23,7 +24,7 @@ class Dog : public Animal
 		Dog();
 		~Dog();
 
-	
+
 		void	makeSound() const;
 
 };

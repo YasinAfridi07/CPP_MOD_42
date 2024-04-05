@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:28:29 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 01:35:47 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 21:25:03 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 Brain::Brain()
 {
-	std::cout << "Brain Constructor Called" << std::endl;
+	std::cout << "\033[1;32m Brain Constructor Called \033[0m" << std::endl;
 }
 Brain::~Brain()
 {
-	std::cout << "Brain Destructor Called" << std::endl;
+	std::cout << "\033[1;32m Brain Destructor Called  \033[0m" << std::endl;
 }
 
 Brain::Brain(const Brain &object)

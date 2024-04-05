@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 03:58:04 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 21:42:44 by yusman           ###   ########.fr       */
+/*   Created: 2024/04/05 21:46:45 by yusman            #+#    #+#             */
+/*   Updated: 2024/04/05 21:52:56 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 #include "Dog.hpp"
 #include "Cat.hpp"
@@ -19,6 +19,7 @@ int main()
 {
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
+	// Animal a;
 
 	delete j;
 	delete i;
