@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 06:28:37 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/04 05:48:54 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 03:56:26 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ WrongAnimal::~WrongAnimal()
 	std::cout << "[Wrong Animal] Destructor Caled" << std::endl;
 }
 
-WrongAnimal::WrongAnimal( const WrongAnimal& src )
+WrongAnimal::WrongAnimal( const WrongAnimal &object)
 {
 	std::cout << "WrongAnimal copy constructor called" << std::endl;
-	*this = src;
+	*this = object;
 }
 
 WrongAnimal& WrongAnimal::operator=( const WrongAnimal& rhs )

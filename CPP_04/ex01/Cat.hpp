@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 03:19:07 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 03:19:08 by yusman           ###   ########.fr       */
+/*   Created: 2024/04/05 03:03:01 by yusman            #+#    #+#             */
+/*   Updated: 2024/04/05 04:43:01 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
-class WrongCat : public WrongAnimal
+class Cat : public Animal
 {
 private:
-
+	Brain	*_brain;
 public:
-	WrongCat();
-	~WrongCat();
+	Cat();
+	~Cat();
+
+	
 
 	void	makeSound() const;
 };

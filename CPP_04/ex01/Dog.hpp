@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 03:19:07 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 03:19:08 by yusman           ###   ########.fr       */
+/*   Created: 2024/04/05 03:08:34 by yusman            #+#    #+#             */
+/*   Updated: 2024/04/05 04:42:55 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#include "WrongAnimal.hpp"
+#include "Animal.hpp"
 
-class WrongCat : public WrongAnimal
+class Dog : public Animal
 {
-private:
+	private:
+		Brain	*_brain;
+	public:
+		Dog();
+		~Dog();
 
-public:
-	WrongCat();
-	~WrongCat();
+	
+		void	makeSound() const;
 
-	void	makeSound() const;
 };
 
 #endif
