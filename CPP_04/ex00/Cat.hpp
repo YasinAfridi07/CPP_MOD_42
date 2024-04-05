@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 02:46:18 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/03 06:23:49 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 22:44:02 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ private:
 public:
 	Cat();
 	~Cat();
+	Cat( const Cat &object);
+	Cat& operator=( const Cat &rhs);
 
 	void	makeSound() const;
 };

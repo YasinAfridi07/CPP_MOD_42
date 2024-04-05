@@ -26,4 +26,19 @@ void	Dog::makeSound() const
 	std::cout << "bark bark!" << std::endl;
 }
 
+Dog::Dog( const Dog &object)
+{
+	*this = object;
+}
+
+Dog& Dog::operator=( const Dog  &rhs )
+{
+	std::cout << "Dog copy assignment operator called." << std::endl;
+	if (this != &rhs)
+	{
+		this->_type = rhs._type;
+		this->_brain = new Brain( *rhs._brain );
+	}
+	return *this;
+}
 

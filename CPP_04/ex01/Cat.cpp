@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 03:02:54 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 07:04:34 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 22:47:46 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,20 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout << "meow" << std::endl;
+}
+
+Cat::Cat( const Cat &object)
+{
+	*this = object;
+}
+
+Cat& Cat::operator=( const Cat &rhs)
+{
+	std::cout << "Cat copy assignment operator called" << std::endl;
+	if (this != &rhs)
+	{
+		this->_type = rhs._type;
+		this->_brain = new Brain( *rhs._brain );
+	}
+	return *this;
 }

@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 03:58:04 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 21:42:44 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 23:17:43 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int main()
 	delete j;
 	delete i;
 	std::cout << "---------------------------------" << std::endl;
+	std::cout << "---------------------------------" << std::endl;
 
 	int size = 1;
 	Animal* animals[size];
@@ -33,9 +34,12 @@ int main()
 		else
 			animals[i] = new Cat();
 	}
-	std::cout << "---------------------" << std::endl;
+	std::cout << "---------------------------------" << std::endl;
+	std::cout << "---------------------------------" << std::endl;
+
 	for (int i = size; i > -1; i--)
 		delete animals[i];
+
 	std::cout << "---------------------" << std::endl;
 
 

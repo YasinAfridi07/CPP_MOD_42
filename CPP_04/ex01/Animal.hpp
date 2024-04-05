@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:23:28 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 21:21:07 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 23:19:27 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ class Animal
 
 
 		virtual void	makeSound() const;
-
 		std::string		getType() const;
 };
 

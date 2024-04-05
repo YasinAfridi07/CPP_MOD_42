@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 02:46:22 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/03 06:23:45 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 22:44:27 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ class Dog : public Animal
 	public:
 		Dog();
 		~Dog();
+		Dog(Dog const &object);
+		Dog &operator=(Dog const &rhs);
 
 		void	makeSound() const;
 

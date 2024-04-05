@@ -24,3 +24,25 @@ void Cat::makeSound() const
 {
 	std::cout << "meow" << std::endl;
 }
+
+void Cat::makeSound() const
+{
+	std::cout << "meow" << std::endl;
+}
+
+Cat::Cat( const Cat &object)
+{
+	*this = object;
+}
+
+Cat& Cat::operator=( const Cat &rhs)
+{
+	std::cout << "Cat copy assignment operator called" << std::endl;
+	if (this != &rhs)
+	{
+		this->_type = rhs._type;
+		this->_brain = new Brain( *rhs._brain );
+	}
+	return *this;
+}
+

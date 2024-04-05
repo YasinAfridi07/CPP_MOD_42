@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 03:08:27 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/05 21:14:14 by yusman           ###   ########.fr       */
+/*   Updated: 2024/04/05 22:52:43 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,18 @@ void	Dog::makeSound() const
 	std::cout << "bark bark!" << std::endl;
 }
 
+Dog::Dog( const Dog &object)
+{
+	*this = object;
+}
 
+Dog& Dog::operator=( const Dog  &rhs )
+{
+	std::cout << "Dog copy assignment operator called." << std::endl;
+	if (this != &rhs)
+	{
+		this->_type = rhs._type;
+		this->_brain = new Brain( *rhs._brain );
+	}
+	return *this;
+}
