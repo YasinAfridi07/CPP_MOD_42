@@ -6,7 +6,7 @@
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 07:38:11 by yusman            #+#    #+#             */
-/*   Updated: 2024/04/01 07:39:58 by yusman           ###   ########.fr       */
+/*   Updated: 2024/05/08 02:47:26 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,19 @@ class ClapTrap
 		ClapTrap(const ClapTrap &object);
 		ClapTrap &operator=(const ClapTrap &rhs);
 
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
+		void attac
+
+
+
+
+
+
+
+
+
+
+
+			void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 };
 
