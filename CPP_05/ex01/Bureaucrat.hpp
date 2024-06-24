@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yusman <yusman@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/25 19:39:19 by yusman            #+#    #+#             */
-/*   Updated: 2024/06/24 16:39:51 by yusman           ###   ########.fr       */
+/*   Created: 2024/06/24 17:54:49 by yusman            #+#    #+#             */
+/*   Updated: 2024/06/24 19:00:09 by yusman           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <string>
 #include <iostream>
 #include <exception>
+# include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -27,7 +30,7 @@ class Bureaucrat
 		{
 			public:
 				const char *what() const throw();
-		};     
+		};
 
 		class GradeTooLowException : public std::exception
 		{
@@ -45,8 +48,9 @@ class Bureaucrat
 		int 			getGrade() const;
 		void			gradeIncreament();
 		void			gradeDecreament();
+		void			signForm(Form &form);
 };
+
 std::ostream &operator<<(std::ostream &out, Bureaucrat const &rhs);
 
 #endif
-//
