@@ -4,12 +4,13 @@
 
 #include "AForm.hpp"
 #include <exception>
+#include <fstream>
 
 class ShrubberyCreationForm : public AForm
 {
     private:
         std::string     _target;
-        void            ascii_tree() const; 
+        void            ascii_tree() const;
 
         class ExecptionClass : public std::exception
         {

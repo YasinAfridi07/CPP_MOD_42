@@ -52,7 +52,7 @@ Bureaucrat & Bureaucrat::operator=(Bureaucrat const &rhs)
 	std::cout << "Bureaucrat Copy Assignment Operator = called" << std::endl;
 	if (this != &rhs)
 	{
-		const_cast<std::string&>(this->_name) = rhs.getName(); // need to understand
+		const_cast<std::string&>(this->_name) = rhs.getName();
 		this->_grade = rhs.getGrade();
 	}
 	return (*this);
@@ -121,3 +121,27 @@ std::ostream &operator<<(std::ostream &out, Bureaucrat const &rhs)
 	return(out);
 }
 
+void Bureaucrat::executeForm(AForm const &Aform)
+{
+	try {
+		Aform.execute(*this);
+		std::cout << _name << " executes " << Aform.getName() << std::endl;
+	}
+	catch (std::exception &e) {
+		std::cerr << _name << " couldn't execute " << Aform.getName() << " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::signAForm(AForm &Aform)
+{
+	try
+	{
+		Aform.beSigned(*this);
+		std::cout << this->_name << " signed " << Aform.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->_name << " couldn't sign " << Aform.getName() <<
+				" because " << e.what() << '\n';
+	}
+}

@@ -16,16 +16,17 @@ class AForm
 		const int 			_signGrade;
 		const int			_execGrade;
 
-		class GradeTooHighException : public std::exception
-		{
-			public:
-				const char *what() const throw();
-		};
-		class GradeTooLowException : public std::exception
-		{
-			public:
-				const char *what() const throw();
-		};
+		protected:
+			class GradeTooHighException : public std::exception
+			{
+				public:
+					const char *what() const throw();
+			};
+			class GradeTooLowException : public std::exception
+			{
+				public:
+					const char *what() const throw();
+			};
 	public:
 		AForm();
 		AForm(std::string name, int _signGrade, int _execGrade);
