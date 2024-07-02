@@ -43,7 +43,7 @@ void 	ShrubberyCreationForm::ascii_tree() const
 	catch (std::exception &e) {
 		throw;
 	}
-	file << "              _{\\ _{\\{\\/}/}/}__            " << std::endl; //// why is it in catch
+	file << "              _{\\ _{\\{\\/}/}/}__            " << std::endl;
 	file << "             {/{/\\}{/{/\\}(\\}{/\\} _         " << std::endl;
 	file << "            {/{/\\}{/{/\\}(_)\\}{/{/\\}  _     " << std::endl;
 	file << "         {\\{/(\\}\\}{/{/\\}\\}{/){/\\}\\} /\\}    " << std::endl;

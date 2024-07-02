@@ -61,7 +61,7 @@ std::ostream &operator<<(std::ostream &out, AForm const &rhs)
 	std::cout << "AForm Copy Assignment Operator << called" << std::endl;
 	out << "AForm name: " << rhs.getName() << std::endl;
 	out << "Grade to sign: " << rhs.getSignGrade() << std::endl;
-	out << "Grade to execute: " << rhs.getExecGrade() << std::endl; // what is only "out"
+	out << "Grade to execute: " << rhs.getExecGrade() << std::endl;
 	out << "Signed: " << rhs.getSigned() << std::endl;
 	return (out);
 }

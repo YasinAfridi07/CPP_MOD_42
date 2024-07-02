@@ -14,7 +14,7 @@ int main()
 	std::cout << "----------------------4" << std::endl;
 
 	try{
-		Form form_2("Form_1", -1000,100);
+		Form form_2("Form1", -1000,100);
 	}
 	catch(std::exception &e)
 	{
