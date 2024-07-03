@@ -22,12 +22,11 @@ Serializer::~Serializer()
 {
 }
 
-static uintptr_t serealize(Data *ptr)
+uintptr_t Serializer::serealize(Data *ptr)
 {
-    return (reinterpret_cast<uintptr_t>(ptr));
+   return (reinterpret_cast<uintptr_t>(ptr));
 }
-
-static Data *deserealize(uintptr_t raw)
+Data *Serializer::deserealize(uintptr_t raw)
 {
-    retrun(reinterpret_cast<Data *>(raw));
+    return (reinterpret_cast<Data *>(raw));
 }
