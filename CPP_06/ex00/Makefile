@@ -1,7 +1,7 @@
 
 NAME = main
 
-SRC = main.cpp 
+SRC = ScalarConverter.cpp main.cpp
 
 CXX = c++
 

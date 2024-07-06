@@ -1,25 +1,25 @@
-
-
 #ifndef SCALARCONVERTER
 #define SCALARCONVERTER
 
-#include <iostream>
+# include <iostream>
+# include <sstream>
 
 class ScalarConverter
 {
-    private:
+	private:
+		ScalarConverter(void);
+		ScalarConverter(const ScalarConverter& object);
+		ScalarConverter& operator=(const ScalarConverter& rhs);
 
-    public:
-        ScalarConverter();
-        ~ScalarConverter();
+	public:
+		~ScalarConverter(void);
 
-        void    convert(std::string str);
-        
-        class ExceptionClass : public std::exception
-        {
-            virtual const char *what() const throw() { return "Non displayable";}
-        };
+		static void	convert(std::string str); // why static?
 
+		class ExceptionClass : public std::exception
+		{
+				virtual const char *what() const throw() { return "Non displayable";}
+		};
 };
 
 

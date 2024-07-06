@@ -23,5 +23,5 @@ int main()
     b = Serializer::deserealize(raw);
     std::cout << "deserealize address: " << b << std::endl;
     std::cout << b->c << "\t" << b->i << "\t" << b->f << "\t" << b->d << std::endl;
-    
+
 }
