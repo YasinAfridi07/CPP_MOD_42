@@ -1,5 +1,6 @@
 
 #include "ScalarConverter.hpp"
+#include <stdio.h>
 
 ScalarConverter::ScalarConverter()
 {
@@ -48,10 +49,6 @@ float toFloat(const std::string str)
 double toDouble(const std::string str)
 {
 	std::string str2 = str;
-	if(str2[str2.length() - 1] == 'f')
-	{
-		str2 = str2.substr(0, str2.length() -1);
-	}
 	std::stringstream str_object(str2);
 	double value;
 	str_object >> value;
@@ -99,7 +96,7 @@ bool isFloat(std::string str)
 
 bool isDouble(std::string str)
 {
-	if(str.find('.') == std::string::npos || str.find('.') == 0 || str.find('.' == str.length() - 1))
+	if(str.find('.') == std::string::npos || str.find('.') == 0 || str.find('.') == str.length() - 1)
 		return false;
 
 	int j = 0;
@@ -119,11 +116,11 @@ bool isDouble(std::string str)
 
 bool isLiterals(std::string str)
 {
-    if (str.compare("nan") == 0 || str.compare("nanf") == 0
-        || str.compare("+inf") == 0 || str.compare("+inff") == 0
-        || str.compare("-inf") == 0 || str.compare("-inff") == 0)
-        return true;
-    return false;
+	if (str.compare("nan") == 0 || str.compare("nanf") == 0
+		|| str.compare("+inf") == 0 || str.compare("+inff") == 0
+		|| str.compare("-inf") == 0 || str.compare("-inff") == 0)
+		return true;
+	return false;
 }
 
 void printChar(std::string str, bool impossible, char c, int i)
@@ -141,7 +138,7 @@ void printInt(std::string str, bool impossible, int i)
 	if(impossible || isLiterals(str) || (!std::isprint(i) && i > 127))
 		std::cout << "Impossible" << std::endl;
 	else
-	std::cout << i << std::endl;
+		std::cout << i << std::endl;
 }
 
 void printFloat(std::string str, bool impossible, float f)
@@ -152,8 +149,8 @@ void printFloat(std::string str, bool impossible, float f)
 		std::cout << "+inff" <<std::endl;
 	else if(str.compare( "-inff" ) == 0 || str.compare( "-inf" ) == 0)
 		std::cout << "-inff" << std::endl;
-		else if (impossible)
-        std::cout << "Impossible" << std::endl;
+	else if (impossible)
+		std::cout << "Impossible" << std::endl;
 	else
 	{
 		if( f - static_cast<int>(f) == 0)
@@ -161,80 +158,78 @@ void printFloat(std::string str, bool impossible, float f)
 		else
 			std::cout << f << "f" << std::endl;
 	}
-	//std::cout << std::endl;
 }
 
 void printDouble(std::string str, bool impossible, double d)
 {
-    if (str.compare( "nan" ) == 0 || str.compare( "nanf" ) == 0)
-        std::cout << "nan";
-    else if (str.compare( "+inff" ) == 0 || str.compare( "+inf" ) == 0)
-        std::cout << "+inf";
-    else if (str.compare( "-inff" ) == 0 || str.compare( "-inf" ) == 0)
-        std::cout << "-inf";
-    else if (impossible)
-        std::cout << "Impossible";
-    else
-    {
-        if (d - static_cast<int>(d) == 0)
-            std::cout << d << ".0" << std::endl;
-        else
-            std::cout << d << "f" << std::endl;
-    }
-    //std::cout << std::endl;
+	if (str.compare( "nan" ) == 0 || str.compare( "nanf" ) == 0)
+		std::cout << "nan";
+	else if (str.compare( "+inff" ) == 0 || str.compare( "+inf" ) == 0)
+		std::cout << "+inf";
+	else if (str.compare( "-inff" ) == 0 || str.compare( "-inf" ) == 0)
+		std::cout << "-inf";
+	else if (impossible)
+	std::cout << "Impossible";
+	else
+	{
+		if (d - static_cast<int>(d) == 0)
+			std::cout << d << ".0" << std::endl;
+		else
+			std::cout << d << std::endl;
+	}
 }
 
 void ScalarConverter::convert(std::string str)
 {
-    bool impossible = false;
-    char c = '\0';
-    int i = 0;
-    float f = 0.0f;
-    double d = 0.0;
+	bool Impossible = false;
+	char c = '\0';
+	int i = 0;
+	float f = 0.0f;
+	double d =0.0;
 
-    try {
-        if (isChar(str))
-        {
-            c = toChar(str);
-            i = static_cast<int>(c);
-            f = static_cast<float>(c);
-            d = static_cast<double>(c);
-        }
-        else if (isInt(str))
-        {
-            i = toInt(str);
-            f = static_cast<float>(i);
-            d = static_cast<double>(i);
-            c = static_cast<char>(i);
-        }
-        else if (isFloat(str))
-        {
-            f = toFloat(str);
-            i = static_cast<int>(f);
-            d = static_cast<double>(f);
-            c = static_cast<char>(f);
-        }
-        else if (isDouble(str))
+	try{
+		if(isChar(str))
+		{
+			c = toChar(str);
+			i = static_cast<int>(c);
+			f = static_cast<float>(c);
+			d = static_cast<double>(c);
+		}
+		else if (isInt(str))
+		{
+			i = toInt(str);
+			c = static_cast<char>(i);
+			f = static_cast<float>(i);
+			d = static_cast<double>(i);
+		}
+		else if (isDouble(str))
         {
             d = toDouble(str);
             i = static_cast<int>(d);
             f = static_cast<float>(d);
             c = static_cast<char>(d);
         }
-        else
-        {
-            impossible = true;
-        }
-        std::cout << "char: "; printChar(str, impossible, c, i);
-        std::cout << "int: "; printInt(str, impossible, i);
-        std::cout << "float: "; printFloat(str, impossible, f);
-        std::cout << "double: "; printDouble(str, impossible, d);
-    }
-    catch (std::exception &e)
-    {
-        std::cout << "char: impossible" << std::endl;
-        std::cout << "int: impossible" << std::endl;
-        std::cout << "float: impossible" << std::endl;
-        std::cout << "double: impossible" << std::endl;
-    }
+		else if(isFloat(str))
+		{
+			f = toFloat(str);
+			c = static_cast<char>(f);
+			i = static_cast<int>(f);
+			d = static_cast<double>(f);
+		}
+		else
+		{
+			Impossible = true;
+		}
+		std::cout << "char = "; printChar(str, Impossible, c, i);
+		std::cout << "int = "; printInt(str, Impossible, i);
+		std::cout << "float = "; printFloat(str, Impossible, f);
+		std::cout << "double = "; printDouble(str, Impossible,d);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "char: Impossible" << std::endl;
+		std::cout << "int: Impossible" << std::endl;
+		std::cout << "float: Impossible" << std::endl;
+		std::cout << "double: Impossible" << std::endl;
+	}
 }

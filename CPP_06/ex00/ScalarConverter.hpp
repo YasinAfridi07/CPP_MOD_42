@@ -14,11 +14,12 @@ class ScalarConverter
 	public:
 		~ScalarConverter(void);
 
-		static void	convert(std::string str); // why static?
+		static void	convert(std::string str);
 
 		class ExceptionClass : public std::exception
 		{
-				virtual const char *what() const throw() { return "Non displayable";}
+				virtual const char *what() const throw()
+					{ return "Non displayable";}
 		};
 };
 
