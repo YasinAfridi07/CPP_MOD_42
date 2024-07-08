@@ -3,37 +3,37 @@
 
 Base	*generate(void)
 {
-    srand(time(NULL));
-    int num = rand() % 3;
+	srand(time(NULL));
+	int num = rand() % 3;
 
-    if(num == 0)
-        return new AClass();
-    else if (num == 1)
-        return new BClass();
-    else 
-    {
-        return new CClass();
-    }
+	if(num == 0)
+		return new AClass();
+	else if (num == 1)
+		return new BClass();
+	else
+	{
+		return new CClass();
+	}
 }
 
 
 void identify(Base *p)
 {
-    if(dynamic_cast<AClass*>(p))
-        std::cout << "A Class" << std::endl;
-    else if (dynamic_cast<BClass*>(p))
-        std::cout << "B Class" << std::endl;
-    else if (dynamic_cast<CClass*>(p))
-        std::cout <<"C Class" << std::endl;
+	if(dynamic_cast<AClass*>(p))
+		std::cout << "A Class" << std::endl;
+	else if (dynamic_cast<BClass*>(p))
+		std::cout << "B Class" << std::endl;
+	else if (dynamic_cast<CClass*>(p))
+		std::cout << "C Class" << std::endl;
 }
 
 void identify(Base &p)
 {
-    try
+	try
 	{
 		AClass &a = dynamic_cast<AClass&>(p);
 		(void)a;
-		std::cout <<  "A Class" << std::endl;
+		std::cout << "A Class" << std::endl;
 	}
 	catch (std::exception &e)
 	{

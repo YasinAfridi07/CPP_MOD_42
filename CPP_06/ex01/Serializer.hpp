@@ -14,7 +14,7 @@ typedef  struct
     float f;
     double d;
 } Data;
-  
+
 class Serializer
 {
     private:
@@ -24,8 +24,8 @@ class Serializer
     public:
         ~Serializer();
 
-        static uintptr_t serealize(Data *ptr);
-        static Data *deserealize(uintptr_t raw);
+        static uintptr_t serialize(Data *ptr);
+        static Data *deserialize(uintptr_t raw);
 
 };
 
