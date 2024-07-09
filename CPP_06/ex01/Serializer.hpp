@@ -9,10 +9,10 @@
 
 typedef  struct
 {
-    char c;
-    int i;
-    float f;
-    double d;
+	char c;
+	int i;
+	float f;
+	double d;
 } Data;
 
 class Serializer
