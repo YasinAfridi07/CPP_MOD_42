@@ -2,26 +2,37 @@
 #define SPAN_HPP
 
 #include <iostream>
-
+#include <vector>
+#include <algorithm>
 
 class Span
 {
 	private:
 		unsigned int _max;
+		std::vector<int>	_vec;
 
-		class MyCPP_08Exception : public std::exception
+		class EmptyException : public std::exception
 		{
 			public:
-					const char *what() const throw;
+					const char *what() const throw();
+		};
+		class FullException : public std::exception
+		{
+			public:
+					const char *what() const throw();
 		};
 
 	public:
 		Span();
+		~Span();
 		Span(unsigned int n);
+		Span(Span const &object);
+		Span & operator=(Span const &rhs);
 
 		void addNumber(int num);
-		void shortestSpan();
-		void longestSpan();
-}
+		int shortestSpan();
+		int longestSpan();
+		void addNumbers(int size);
+};
 
 #endif

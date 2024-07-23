@@ -2,7 +2,7 @@
 
 NAME = main
 
-SRC = main.cpp Span.cpp
+SRC = main.cpp
 
 CXX = c++
 

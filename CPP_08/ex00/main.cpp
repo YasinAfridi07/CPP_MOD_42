@@ -9,6 +9,7 @@
 int main() {
 
 	std::vector<int> vec;
+	vec.push_back(-1);
 	vec.push_back(1);
 	vec.push_back(2);
 	vec.push_back(3);
@@ -16,7 +17,7 @@ int main() {
 
 	try
 	{
-		std::cout << easyfind(vec, 1) <<std::endl;
+		std::cout << easyfind(vec, -1) <<std::endl;
 		std::cout << easyfind(vec, 10) << std::endl;
 	}
 	catch(std::exception &e)
