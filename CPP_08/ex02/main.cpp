@@ -25,5 +25,25 @@ int main()
 	++it;
 	}
 	std::stack<int> s(mstack);
-	return 0;
+
+	std::cout << "---------------------------------------------------" << std::endl;
+
+		std::vector<int> vector;
+		vector.push_back(5);
+		vector.push_back(17);
+		std::cout << vector.front() << std::endl;
+		std::cout << vector.size() << std::endl;
+		vector.push_back(3);
+		vector.push_back(5);
+		vector.push_back(737);
+	//[...]
+	vector.push_back(0);
+	std::vector<int>::iterator it2 = vector.begin();
+	std::vector<int>::iterator ite2 = vector.end();
+	while (it2 != ite2)
+	{
+		std::cout << *it2 << std::endl;
+		++it2;
+	}
+	std::vector<int> s1(vector);
 }
