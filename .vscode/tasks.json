@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "g++ build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${fileDirname}/${fileBasenameNoExtension}.cpp", // Source file with no extension
+                "-o", "${fileDirname}/${fileBasenameNoExtension}" // Output executable with no extension
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by VS Code for g++ build."
+        }
+    ]
+}

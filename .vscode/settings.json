@@ -65,6 +65,7 @@
 		"fstream": "cpp",
 		"stack": "cpp",
 		"filesystem": "cpp",
-		"scalarconverter.hpp": "c"
+		"scalarconverter.hpp": "c",
+		"*.tpp": "cpp"
 	}
 }
