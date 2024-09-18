@@ -66,6 +66,9 @@
 		"stack": "cpp",
 		"filesystem": "cpp",
 		"scalarconverter.hpp": "c",
-		"*.tpp": "cpp"
+		"*.tpp": "cpp",
+		"__tree": "cpp",
+		"map": "cpp",
+		"list": "cpp"
 	}
 }
